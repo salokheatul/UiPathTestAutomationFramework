@@ -1,0 +1,206 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="FindUnicornName" this:FindUnicornName.str_Name="Atul" this:FindUnicornName.str_Month="July" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="str_Name" Type="InArgument(x:String)" />
+    <x:Property Name="str_Month" Type="InArgument(x:String)" />
+    <x:Property Name="out_strUnicornName" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>FindUnicornName_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="FindUnicornName" sap:VirtualizedContainerService.HintSize="689.3333333333333,1344" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard DisplayName="Use Application/Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,1321.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c9cdde79-0034-4203-aa9f-db1e820421aa">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1079.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="UnicornName" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'What is your name?*'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,292.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c9cdde79-0034-4203-aa9f-db1e820421aa" Text="[str_Name]" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="rpasamples.com/findunicornname" CVScreenId="b8bf0b80-4626-47c3-9f83-07a2386dae0e" CvElementArea="699, 430, 544, 64" CvType="InputBox" DesignTimeRectangle="701, 431, 542, 62" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='txtName' tag='INPUT' type='text' class='text-input set-font' placeholder='Enter your name' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="da70ea47-2366-475a-95ce-ba6b1aa623ae" InformativeScreenshot="c6993050e8122e375ad671a0302a4ac9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Find Unicorn Name' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="b8bf0b80-4626-47c3-9f83-07a2386dae0e" CvTextArea="698, 399, 229, 22" CvTextArgument="What is your name?*" CvType="Text" DesignTimeRectangle="701, 393, 228, 32" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='label' tag='SPAN' type='' aaname='What is your name?*' matching:class='fuzzy' fuzzylevel:class='0.0' fuzzylevel:aaname='0.0' check:innerText='What is your name?*' /&gt;" Guid="f3467caa-1b50-478b-8168-0b9d117d4503" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NSelectItem DisplayName="Select Item 'What month were you bor…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[str_Month]" ScopeIdentifier="c9cdde79-0034-4203-aa9f-db1e820421aa" Version="V5">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="13">
+                  <x:String>Select your birth month</x:String>
+                  <x:String>January</x:String>
+                  <x:String>February</x:String>
+                  <x:String>March</x:String>
+                  <x:String>April</x:String>
+                  <x:String>May</x:String>
+                  <x:String>June</x:String>
+                  <x:String>July</x:String>
+                  <x:String>August</x:String>
+                  <x:String>September</x:String>
+                  <x:String>October</x:String>
+                  <x:String>November</x:String>
+                  <x:String>December</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="rpasamples.com/findunicornname" CVScreenId="ab29e235-a302-48e1-81d7-aa26cd395edd" CvElementArea="699, 607, 538, 63" CvType="InputBox" DesignTimeRectangle="701, 608, 534, 60" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='selMonth' tag='SELECT' type='' class='down-chevron set-font' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="58349f03-85ad-481a-a41d-2ece98adb9e6" InformativeScreenshot="a3edc892e7e88bf85fab62231136e4c7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Find Unicorn Name' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="ab29e235-a302-48e1-81d7-aa26cd395edd" CvTextArea="698, 575, 317, 24" CvTextArgument="What month were you born?" CvType="Text" DesignTimeRectangle="701, 570, 315, 32" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='What month were you born?' class='label' tag='SPAN' type='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='What month were you born?' /&gt;" Guid="f78b15fb-0221-4cfd-ad73-1bc5639cdccb" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Get Unicorn Name'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c9cdde79-0034-4203-aa9f-db1e820421aa" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="rpasamples.com/findunicornname" CVScreenId="b1b02efc-e56a-4356-ac51-0fadb332710d" CvElementArea="833, 738, 276, 71" CvTextArea="861, 764, 219, 22" CvTextArgument="Get Unicorn Name" CvType="Button" DesignTimeRectangle="836, 740, 270, 66" ElementType="Button" FullSelectorArgument="&lt;webctrl id='getNameButton' tag='BUTTON' /&gt;" Guid="42288072-7fea-4331-9a11-fb16a816d585" InformativeScreenshot="a41defc30e26a0fc2e6841e34007f7dc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Find Unicorn Name' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get Text 'Daffodil Raindrop-Mist'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,191.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="c9cdde79-0034-4203-aa9f-db1e820421aa" TextString="[out_strUnicornName]" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="rpasamples.com/findunicornname" CVScreenId="1a4acf5d-6e13-4c4e-836b-18d7a4b586eb" CvType="AnyWordGroup" DesignTimeRectangle="831, 931, 278, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl id='lblUnicornName' tag='DIV' /&gt;" Guid="e46c1617-eb2f-457b-9df3-a590616a18f0" InformativeScreenshot="1013cc8ef2bc6a007635eee4f1d10706.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Find Unicorn Name' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,112" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[out_strUnicornName]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1150" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIJSURBVDhPY2DADZgZGBi40AWJBmoKPOpBLlI26OJ4QUNDg35RUZEKiJ0XrRyVH6NcAGJHRkZKtrW1WaKrxwBr2vvXb9qwcc6qytas7d35//ZPzv6/ramvd8OGDS2ruyfvR1ePAfa2T546q7Xr9NmDR+6umlT0f01P2v/zyze8mdLRdfRw94xl6OoxwPz587PWrVv3v7i4+H9FRcX/zOSU/+nJKf83btz4f+3atZ3o6tEB+5YtW94ZGRn9N7Y0++/s7Pzf2Nj4v4e/z//Q0ND/mzdv/m1tbS2FrgkO7O3ttffu3QvWZJPq99/c3Py/lZXV/8Dm7P8uLi7/V61a9X/ChAne6PrgIDAw0OD79+//Y2Ji/tvZ2f0HucTPz+9/QEAAGL9///7/ip7Jy03VNHnR9YKBhoaGwo8fP/7/+/fv/7Nnz/4/efIEjJ8+ffr/79+//0Hg3vIt/5tj01zR9cLBxYsXT4NVYgEPb97+/2r59v8szMzC6PrgoKKiQuPOnTvP0TU/efLkY19NQ+blaUvOTUwvzEfXhwLq6uqOzZ07FxR1RzZu3Lhr3rx5/xsbG2/D5KWFRVUZGBhYUXUhgZ7k5KeLCwr+d8bFzW9LTm6el539f0p6+l8GBgYWdLVYwUQzs5oD7u4PuoyN46p0dZ0PuLvfmGZuPhddHV7Ay8rKB2NzsbBgjzYoAADapBEELFg1qwAAAABJRU5ErkJggg==" InformativeScreenshot="bd8ae16af7175056541ea1826911a28c.jpg" Selector="&lt;html app='msedge.exe' title='Find Unicorn Name' /&gt;" Url="https://www.rpasamples.com/findunicornname" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

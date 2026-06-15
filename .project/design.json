@@ -1,0 +1,19 @@
+{
+  "Tags": [
+    {
+      "Key": "test"
+    },
+    {
+      "Key": "testSuite"
+    },
+    {
+      "Key": "Testing"
+    },
+    {
+      "Key": "QA"
+    }
+  ],
+  "SeparateRuntimeDependencies": true,
+  "IncludeSources": true,
+  "ConnectorKeys": []
+}
